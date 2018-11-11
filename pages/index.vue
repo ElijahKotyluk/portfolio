@@ -45,7 +45,7 @@
             color="primary"
             flat
             nuxt
-            to="/inspire">Continue</v-btn>
+            to="/projects">Continue</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -53,8 +53,8 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Logo from '~/components/animations/Logo.vue'
+import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
 
 export default {
   components: {
