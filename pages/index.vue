@@ -37,7 +37,7 @@
           <br>
           <a
             href="https://github.com/nuxt/nuxt.js"
-            target="_blank">Nuxt GitHub</a>
+            target="_blank"><font-awesome-icon :icon="['fab', 'github']" style="font-size: 30px"/></a>
         </v-card-text>
         <v-card-actions>
           <v-spacer/>
@@ -55,11 +55,13 @@
 <script>
 import Logo from '~/components/animations/Logo.vue'
 import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    FontAwesomeIcon
   }
 }
 </script>

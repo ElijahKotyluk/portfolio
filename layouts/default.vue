@@ -86,6 +86,7 @@
 </template>
 
 <script>
+
   export default {
     data() {
       return {
@@ -94,7 +95,8 @@
         fixed: false,
         items: [
           { icon: 'apps', title: 'Home', to: '/' },
-          { icon: 'bubble_chart', title: 'Projects', to: '/projects' }
+          { icon: 'bubble_chart', title: 'Projects', to: '/projects' },
+          { icon: 'email', title: 'Contact', to: '/contact'}
         ],
         miniVariant: false,
         right: true,
