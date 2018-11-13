@@ -20,7 +20,7 @@
           required
           name="mail"
         ></v-text-field>
-        
+
         <v-textarea
           class="pa-3"
           outline

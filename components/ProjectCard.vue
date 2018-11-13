@@ -10,7 +10,7 @@
       <v-card
       width="400px">
         <v-card-title class="headline justify-center ">
-          <a href="https://github.com/ElijahKotyluk/Vue-Moment-Calendar"
+          <a href="https://vue-moment-calendar.appspot.com/"
           target="_blank"
           class="project-title">
             Vue Moment Calendar

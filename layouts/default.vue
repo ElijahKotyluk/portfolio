@@ -3,6 +3,7 @@
     <v-navigation-drawer
       :mini-variant="miniVariant"
       :clipped="clipped"
+      :width="200"
       v-model="drawer"
       fixed
       app
@@ -30,6 +31,7 @@
       app
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-toolbar-title v-text="title"/>
       <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
@@ -42,13 +44,7 @@
       >
         <v-icon>web</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"/>
+      <v-spacer></v-spacer>
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -63,6 +59,7 @@
     </v-content>
     <v-navigation-drawer
       :right="right"
+      :width="200"
       v-model="rightDrawer"
       temporary
       fixed
@@ -72,9 +69,29 @@
           <v-list-tile-action>
             <v-icon light>compare_arrows</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
+          <v-list-tile-title>Current Projects</v-list-tile-title>
         </v-list-tile>
       </v-list>
+
+
+      <v-list>
+        <v-list-tile
+          v-for="(project, i) in projects"
+          :key="i"
+          router
+          exact
+          :href="project.href"
+        >
+          <v-list-tile-action>
+            <v-icon v-html="project.icon" />
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title v-text="project.title" />
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+
+
     </v-navigation-drawer>
     <v-footer
       :fixed="fixed"
@@ -98,10 +115,14 @@
           { icon: 'bubble_chart', title: 'Projects', to: '/projects' },
           { icon: 'email', title: 'Contact', to: '/contact'}
         ],
+        projects: [
+          { icon: 'today', title: 'vue-moment-calendar', href: 'https://github.com/ElijahKotyluk/Vue-Moment-Calendar'},
+          { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'}
+        ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Elijah Kotyluk'
+        title: 'ElijahKotyluk.com'
       }
     }
   }
