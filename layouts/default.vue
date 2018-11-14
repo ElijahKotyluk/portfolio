@@ -1,20 +1,21 @@
 <template>
   <v-app dark>
+
     <v-navigation-drawer
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      :width="200"
-      v-model="drawer"
-      fixed
-      app
+    :mini-variant="miniVariant"
+    :clipped="clipped"
+    width="200"
+    v-model="drawer"
+    fixed
+    app
     >
       <v-list>
         <v-list-tile
-          v-for="(item, i) in items"
-          :to="item.to"
-          :key="i"
-          router
-          exact
+        v-for="(item, i) in items"
+        :to="item.to"
+        :key="i"
+        router
+        exact
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon" />
@@ -25,6 +26,8 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+
+
     <v-toolbar
       :clipped-left="clipped"
       fixed
@@ -52,14 +55,17 @@
         <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
+
+
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
+
     <v-navigation-drawer
       :right="right"
-      :width="200"
+      width="200"
       v-model="rightDrawer"
       temporary
       fixed
@@ -78,8 +84,6 @@
         <v-list-tile
           v-for="(project, i) in projects"
           :key="i"
-          router
-          exact
           :href="project.href"
         >
           <v-list-tile-action>
@@ -93,6 +97,7 @@
 
 
     </v-navigation-drawer>
+
     <v-footer
       :fixed="fixed"
       app
@@ -108,7 +113,7 @@
     data() {
       return {
         clipped: false,
-        drawer: true,
+        drawer: false,
         fixed: false,
         items: [
           { icon: 'apps', title: 'Home', to: '/' },

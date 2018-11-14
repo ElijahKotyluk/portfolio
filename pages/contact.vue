@@ -4,35 +4,38 @@
   justify-center
   align-center>
     <v-flex xs12>
-      <v-card class="elevation-12"
+      <v-card
+      class="elevation-12"
       width="50em">
         <v-toolbar>
           <v-toolbar-title>Contact Me</v-toolbar-title>
         </v-toolbar>
-        <v-form method="post" action="https://formspree.io/elijah@elijahkotyluk.com" id="nativeForm" v-model="valid">
 
-        <v-text-field
-          class="pa-3"
-          outline
-          label="E-mail"
-          v-model="email"
-          :rules="emailRules"
-          required
-          name="mail"
-        ></v-text-field>
-
-        <v-textarea
-          class="pa-3"
-          outline
-          label="Message"
-          v-model="message"
-          :rules="messageRules"
-          required
-          name="message"
-        ></v-textarea>
-
+        <v-form method="post"
+        action="https://formspree.io/elijah@elijahkotyluk.com"
+        id="nativeForm"
+        v-model="valid">
+          <input type="hidden" name="_next" value="https://elijahkotyluk.com" />
+          <v-text-field
+            class="pa-3"
+            outline
+            label="E-mail"
+            v-model="email"
+            :rules="emailRules"
+            required
+            name="mail"
+          ></v-text-field>
+          <v-textarea
+            class="pa-3"
+            outline
+            label="Message"
+            v-model="message"
+            :rules="messageRules"
+            required
+            name="message"
+          ></v-textarea>
           <v-btn @click="submit" :disabled="!valid">submit</v-btn>
-        </v-form>
+        </v-form>  
       </v-card>
     </v-flex>
   </v-layout>

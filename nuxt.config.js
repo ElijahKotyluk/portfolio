@@ -28,16 +28,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/style/app.styl',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '~/assets/style/app.styl'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify',
-    '@/plugins/fontawesome.js'
+    '@/plugins/vuetify'
   ],
 
   /*
@@ -45,7 +43,16 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-fontawesome', {
+        component: 'fa',
+        imports: [
+          {
+            set: '@fortawesome/fontawesome-free-brands',
+            icons: ['faGithub', 'faLinkedin', 'faTwitter']
+          }
+        ]
+      }]
   ],
   /*
   ** Axios module configuration
