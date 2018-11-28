@@ -8,18 +8,27 @@
       sm8
       md6>
       <v-card
-      class="mt-5">
-        <v-card-title class="headline justify-center">
+      class="mt-5 elevation-12"
+      width="50vh">
+        <v-toolbar>
+          <v-spacer />
+          <v-card-title class="headline">
+            Elijah Kotyluk
+          </v-card-title>
+          <v-spacer />
+        </v-toolbar>
+        <v-card-title class="headline justify-center mt-3">
           <v-avatar size="200">
             <img src="../static/mee.png" alt="avatar" />
           </v-avatar>
         </v-card-title>
-        <v-card-title class="headline justify-center">Elijah Kotyluk</v-card-title>
         <v-card-text>
-          <p>I'm Elijah, a self-taught software developer in his 20's.</p>
-          <p>Want to check out what I'm working on? <a
-            href="https://vuetifyjs.com"
-            target="_blank">github</a>.</p>
+          <div class="text-xs-center">
+            <p>Hello, I'm a self-taught software developer in his 20's.</p>
+            <p>Want to check out what I'm working on? <a
+              href="https://github.com/ElijahKotyluk"
+              target="_blank">github</a>.</p>
+          </div>
           <div class="text-xs-right">
             <em><small>&mdash; Elijah Kotyluk</small></em>
           </div>
@@ -48,7 +57,7 @@
             color="primary"
             flat
             nuxt
-            to="/projects">Continue</v-btn>
+            to="/skills">Continue</v-btn>
         </v-card-actions>
       </v-card>
       <div class="text-xs-center mt-5">

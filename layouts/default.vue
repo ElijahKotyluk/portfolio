@@ -5,6 +5,7 @@
     :mini-variant="miniVariant"
     :clipped="clipped"
     width="200"
+    hide-overlay
     v-model="drawer"
     fixed
     app
@@ -34,7 +35,7 @@
       app
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title"/>
+      <v-toolbar-title v-text="title.name" :href="title.href" />
       <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
@@ -44,6 +45,7 @@
       <v-btn
         icon
         @click.stop="clipped = !clipped"
+        class="hidden-md-and-down"
       >
         <v-icon>web</v-icon>
       </v-btn>
@@ -52,7 +54,7 @@
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
-        <v-icon>menu</v-icon>
+        <v-icon>folder_open</v-icon>
       </v-btn>
     </v-toolbar>
 
@@ -117,17 +119,21 @@
         fixed: false,
         items: [
           { icon: 'apps', title: 'Home', to: '/' },
-          { icon: 'bubble_chart', title: 'Projects', to: '/projects' },
+          { icon: 'bubble_chart', title: 'Skills', to: '/skills' },
           { icon: 'email', title: 'Contact', to: '/contact'}
         ],
         projects: [
           { icon: 'today', title: 'vue-moment-calendar', href: 'https://github.com/ElijahKotyluk/Vue-Moment-Calendar'},
-          { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'}
+          { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'},
+          { icon: 'chat', title: 'vue-firebase-chat', href: 'https://github.com/ElijahKotyluk/vue-firebase-chat'}
         ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'ElijahKotyluk.com'
+        title: {
+          name: 'ElijahKotyluk.com',
+          href: 'https://elijahkotyluk.com/'
+        }
       }
     }
   }

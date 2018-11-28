@@ -3,12 +3,19 @@
   column
   justify-center
   align-center>
-    <v-flex xs12>
+    <v-flex
+    xs12
+    sm8
+    md6>
       <v-card
-      class="elevation-12"
-      width="50em">
+      class="mt-5 elevation-12"
+      width="50vh">
         <v-toolbar>
-          <v-toolbar-title>Contact Me</v-toolbar-title>
+          <v-spacer />
+          <v-toolbar-title class="headline">
+            Contact Me
+          </v-toolbar-title>
+          <v-spacer />
         </v-toolbar>
 
         <v-form method="post"
@@ -17,7 +24,7 @@
         v-model="valid">
           <input type="hidden" name="_next" value="https://elijahkotyluk.com" />
           <v-text-field
-            class="pa-3"
+            class="pa-3 mt-2"
             outline
             label="E-mail"
             v-model="email"
@@ -35,33 +42,33 @@
             name="message"
           ></v-textarea>
           <v-btn @click="submit" :disabled="!valid">submit</v-btn>
-        </v-form>  
+        </v-form>
       </v-card>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-         valid: false,
-         message: '',
-         messageRules: [
-           (v) => !!v || 'Message is required',
-           (v) => v.length >= 10 || 'Message must be at least 10 characters'
-         ],
-         email: '',
-         emailRules: [
-           (v) => !!v || 'E-mail is required',
-           (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-         ]
-       }
-     },
-     methods: {
-       submit() {
-         nativeForm.submit()
-       }
+export default {
+  data () {
+    return {
+       valid: false,
+       message: '',
+       messageRules: [
+         (v) => !!v || 'Message is required',
+         (v) => v.length >= 10 || 'Message must be at least 10 characters'
+       ],
+       email: '',
+       emailRules: [
+         (v) => !!v || 'E-mail is required',
+         (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+       ]
      }
-  }
+   },
+   methods: {
+     submit() {
+       nativeForm.submit()
+     }
+   }
+}
 </script>
