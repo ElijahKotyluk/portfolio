@@ -17,14 +17,14 @@ export default {
           'React'
         ],
         backgroundColor: [
-          'rgba(53, 73, 94, 0.5)',
-          'rgba(255, 99, 132, 0.5)',
-          'rgba(31, 150, 243, 0.5)',
-          'rgba(252, 219, 75, 0.5)',
-          'rgba(51, 50, 50, 0.5)',
-          'rgba(137, 207, 243, 0.5)',
-          'rgba(135, 194, 75, 0.5)',
-          'rgba(81, 98, 142, 0.5)'
+          'rgba(53, 73, 94, 0.3)',
+          'rgba(255, 99, 132, 0.3)',
+          'rgba(31, 150, 243, 0.3)',
+          'rgba(252, 219, 75, 0.3)',
+          'rgba(51, 50, 50, 0.3)',
+          'rgba(137, 207, 243, 0.3)',
+          'rgba(135, 194, 75, 0.3)',
+          'rgba(81, 98, 142, 0.3)'
         ],
         pointBackgroundColor: [
           'rgba(53, 73, 94, 1)',
@@ -73,7 +73,8 @@ export default {
       },
       legend: {
         labels: {
-          padding: 10
+          padding: 10,
+          fontColor: 'rgba(189, 189, 189, 1)'
         },
         position: 'left'
       },
