@@ -18,7 +18,7 @@
           <v-spacer />
         </v-toolbar>
         <v-card-title class="headline justify-center mt-3">
-          <v-avatar size="200">
+          <v-avatar size="200" class="elevation-12">
             <img src="../static/mee.png" alt="avatar" />
           </v-avatar>
         </v-card-title>
