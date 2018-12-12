@@ -4,14 +4,13 @@ export default {
   extends: PolarArea,
   mounted: function mounted() {
     this.renderChart({
-      labels: ['Vue/Nuxt', 'SCSS/CSS', 'Vuetify', 'Python/Flask', 'Flask', 'Webpack', 'Node/Express', 'React'],
+      labels: ['Vue/Nuxt', 'SCSS/CSS', 'Vuetify', 'Python/Flask', 'Webpack', 'Node/Express', 'React'],
       datasets: [{
         label: [
           'Vue/Nuxt',
           'SCSS/CSS',
           'Vuetify',
           'Python/Flask',
-          'Flask',
           'Webpack',
           'Node/Express',
           'React'
@@ -20,7 +19,6 @@ export default {
           'rgba(53, 73, 94, 0.3)',
           'rgba(255, 99, 132, 0.3)',
           'rgba(31, 150, 243, 0.3)',
-          'rgba(252, 219, 75, 0.3)',
           'rgba(51, 50, 50, 0.3)',
           'rgba(137, 207, 243, 0.3)',
           'rgba(135, 194, 75, 0.3)',
@@ -30,7 +28,6 @@ export default {
           'rgba(53, 73, 94, 1)',
           'rgba(255,99,132,1)',
           'rgba(31, 150, 243, 1)',
-          'rgba(252, 219, 75, 1)',
           'rgba(51, 50, 50, 1)',
           'rgba(137, 207, 243, 1)',
           'rgba(135, 194, 75, 1)',
@@ -40,7 +37,6 @@ export default {
           'rgba(53, 73, 94, 1)',
           'rgba(255,99,132,1)',
           'rgba(31, 150, 243, 1)',
-          'rgba(252, 219, 75, 1)',
           'rgba(51, 50, 50, 1)',
           'rgba(137, 207, 243, 1)',
           'rgba(135, 194, 75, 1)',
@@ -50,7 +46,6 @@ export default {
           'rgba(53, 73, 94, 1)',
           'rgba(255,99,132,1)',
           'rgba(31, 150, 243, 1)',
-          'rgba(252, 219, 75, 1)',
           'rgba(51, 50, 50, 1)',
           'rgba(137, 207, 243, 1)',
           'rgba(135, 194, 75, 1)',
@@ -59,7 +54,7 @@ export default {
         hoverBorderColor: [
 
         ],
-        data: [8, 7, 7.5, 5.5, 6, 7, 5, 5.5]
+        data: [8, 7, 7.5, 6, 7, 5, 5.5]
       }]
     },
     {

@@ -1,31 +1,33 @@
 <template>
   <v-app dark>
     <v-toolbar
-      :clipped-left="clipped"
       fixed
-      app
-    >
+      app>
       <v-toolbar-title v-text="title.name" :href="title.href" />
       <v-spacer></v-spacer>
-      <v-btn
-      v-for="(item, i) in items"
-      :to="item.to"
-      :key="i"
-      router
-      exact
-      >
-        <v-list-tile-action>
-          <v-icon v-html="item.icon" />
-        </v-list-tile-action>
-        <v-list-tile-content>
-          <v-list-tile-title v-text="item.title" />
-        </v-list-tile-content>
-      </v-btn>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn
+          v-for="(item, i) in menu"
+          :key="i"
+          :to="item.to"
+          flat
+          router
+          exact>{{ item.title }}</v-btn>
+      </v-toolbar-items>
+      <v-menu class="hidden-md-and-up">
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-tile v-for="item in menu" :key="item.icon">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+             </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
 
-
       <v-btn
-      @click.stop="rightDrawer = !rightDrawer"
-      >
+      @click.stop="rightDrawer = !rightDrawer">
         <v-list-tile-action>
           <v-icon>folder_open</v-icon>
         </v-list-tile-action>
@@ -33,10 +35,6 @@
           <v-list-tile-title v-text="projects.title" />
         </v-list-tile-content>
       </v-btn>
-
-
-    </v-toolbar>
-
 
     <v-content>
       <v-container>
@@ -60,13 +58,11 @@
         </v-list-tile>
       </v-list>
 
-
       <v-list>
         <v-list-tile
           v-for="(project, i) in projects.list"
           :key="i"
-          :href="project.href"
-        >
+          :href="project.href">
           <v-list-tile-action>
             <v-icon v-html="project.icon" />
           </v-list-tile-action>
@@ -75,8 +71,6 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-
-
     </v-navigation-drawer>
 
     <v-footer
@@ -98,7 +92,7 @@
         clipped: false,
         drawer: false,
         fixed: false,
-        items: [
+        menu: [
           { icon: 'apps', title: 'Home', to: '/' },
           { icon: 'bubble_chart', title: 'Skills', to: '/skills' },
           { icon: 'email', title: 'Contact', to: '/contact'}
