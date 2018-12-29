@@ -3,27 +3,33 @@
     <v-toolbar
       fixed
       app>
-      <v-toolbar-title v-text="title.name" :href="title.href" />
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
+      <!-- toolbar title -->
+      <v-toolbar-title>
         <v-btn
-          v-for="(item, i) in menu"
-          :key="i"
-          :to="item.to"
-          flat
-          router
-          exact>{{ item.title }}</v-btn>
+        outline
+        flat
+        active-class
+        ripple
+        class="title font-weight-light text-lowercase"
+        to="/">{{ title.name }}</v-btn>
+      </v-toolbar-title>
+
+      <!-- toolbar nav -->
+      <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn
+            v-for="(item, i) in menu"
+            :key="i"
+            :to="item.to"
+            class="body-2"
+            flat
+            color="rgb(135, 134, 134)"
+            active-class
+            ripple
+            router
+            exact>
+            {{ item.title }}
+          </v-btn>
       </v-toolbar-items>
-      <v-menu class="hidden-md-and-up">
-        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-        <v-list>
-          <v-list-tile v-for="item in menu" :key="item.icon">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-             </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
     </v-toolbar>
 
       <v-btn
@@ -93,7 +99,7 @@
         drawer: false,
         fixed: false,
         menu: [
-          { icon: 'apps', title: 'Home', to: '/' },
+          { icon: 'apps', title: 'About Me', to: '/' },
           { icon: 'bubble_chart', title: 'Skills', to: '/skills' },
           { icon: 'email', title: 'Contact', to: '/contact'}
         ],
