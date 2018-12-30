@@ -36,7 +36,7 @@
       <v-spacer></v-spacer>
 
       <!-- menu for mobile devices -->
-      <v-menu class="hidden-sm-and-up">
+      <v-menu class="hidden-sm-and-up pr-4">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
         <v-list>
           <v-list-tile v-for="item in menu" :key="item.icon" :to="item.to">
