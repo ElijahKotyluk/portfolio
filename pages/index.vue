@@ -15,19 +15,19 @@
 
         <!-- avatar -->
         <v-avatar
-        class="elevation-12 img-zoom"
+        class="elevation-12 intro-zoom"
         size="200">
           <img src="../static/mee.png" alt="avatar" />
         </v-avatar>
 
-        <div class="text-xs-center">
+        <div class="text-xs-center intro-zoom">
           <p class="display-1 pt-3">
             Elijah Kotyluk
           </p>
         </div>
 
         <!-- social links -->
-        <div class="text-xs-center">
+        <div class="text-xs-center intro-zoom">
           <a
           href="https://www.linkedin.com/in/elijahkotyluk"
           target="_blank">
@@ -70,17 +70,17 @@ export default {
 <style>
 @keyframes zoom-in-out {
     0% {
-        transform: scale(.3,.3);
+        transform: scale(.3, .3);
     }
     50% {
-        transform: scale(1.1,1.1);
+        transform: scale(1.1, 1.1);
     }
     100% {
-        transform: scale(1,1);
+        transform: scale(1, 1);
     }
 }
 
-.img-zoom {
-	animation: zoom-in-out 1s;
+.intro-zoom {
+	animation: zoom-in-out 1.5s;
 }
 </style>
