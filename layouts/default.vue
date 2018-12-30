@@ -1,6 +1,7 @@
 <template>
   <v-app dark>
     <v-toolbar
+      class="pa-0"
       fixed
       app>
       <!-- toolbar title -->
@@ -15,7 +16,7 @@
       </v-toolbar-title>
 
       <!-- toolbar nav -->
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-toolbar-items class="hidden-xs-only">
           <v-btn
             v-for="(item, i) in menu"
             :key="i"
@@ -30,6 +31,21 @@
             {{ item.title }}
           </v-btn>
       </v-toolbar-items>
+
+      <!-- a little space -->
+      <v-spacer></v-spacer>
+
+      <!-- menu for mobile devices -->
+      <v-menu class="hidden-sm-and-up">
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-tile v-for="item in menu" :key="item.icon" :to="item.to">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+             </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar>
 
       <v-btn
@@ -42,45 +58,15 @@
         </v-list-tile-content>
       </v-btn>
 
+    <!-- nuxt content -->
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
 
-    <v-navigation-drawer
-      :right="right"
-      width="200"
-      v-model="rightDrawer"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Current Projects</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-
-      <v-list>
-        <v-list-tile
-          v-for="(project, i) in projects.list"
-          :key="i"
-          :href="project.href">
-          <v-list-tile-action>
-            <v-icon v-html="project.icon" />
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="project.title" />
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-footer
-      :fixed="fixed"
+      fixed
       app
     >
       <v-spacer></v-spacer>
@@ -95,9 +81,6 @@
   export default {
     data() {
       return {
-        clipped: false,
-        drawer: false,
-        fixed: false,
         menu: [
           { icon: 'apps', title: 'About Me', to: '/' },
           { icon: 'bubble_chart', title: 'Skills', to: '/skills' },
@@ -111,9 +94,6 @@
             { icon: 'chat', title: 'vue-firebase-chat', href: 'https://github.com/ElijahKotyluk/vue-firebase-chat'}
           ]
         },
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
         title: {
           name: 'ElijahKotyluk.com',
           href: 'https://elijahkotyluk.com/'
@@ -122,3 +102,10 @@
     }
   }
 </script>
+
+<style>
+.v-toolbar__content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+</style>
