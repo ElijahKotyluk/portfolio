@@ -59,7 +59,7 @@
       </v-btn>
 
     <!-- nuxt content -->
-    <v-content>
+    <v-content class="pt-3">
       <v-container>
         <nuxt />
       </v-container>
