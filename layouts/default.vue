@@ -59,8 +59,10 @@
       </v-btn>
 
     <!-- nuxt content -->
-    <v-content class="pt-3">
-      <v-container>
+    <v-content
+    fill-height
+    class="pt-3">
+      <v-container fill-height>
         <nuxt />
       </v-container>
     </v-content>
