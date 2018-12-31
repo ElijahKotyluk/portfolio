@@ -1,73 +1,69 @@
 <template>
   <v-layout
     column
-    justify-center
     align-center>
     <v-flex
-      xs12
-      sm8
-      md6>
+    xs12
+    sm8
+    md6>
 
       <!-- Intro Container -->
-      <v-container
-      column
-      justify-space-around
-      align-content-space-between>
+      <v-container fill-height>
+        <v-layout
+        column>
+          <!-- Avatar -->
+          <v-avatar
+          class="elevation-12 intro-zoom"
+          size="256">
+            <img src="../static/mee.png" alt="avatar" />
+          </v-avatar>
 
-        <!-- Avatar -->
-        <v-avatar
-        class="elevation-12 intro-zoom"
-        size="200">
-          <img src="../static/mee.png" alt="avatar" />
-        </v-avatar>
+          <!-- Intro Name/Title -->
+          <div class="text-xs-center intro-zoom pt-2">
+            <p class="display-1 pt-3">
+              Elijah Kotyluk
+            </p>
+          </div>
 
-        <!-- Intro Name/Title -->
-        <div class="text-xs-center intro-zoom">
-          <p class="display-1 pt-3">
-            Elijah Kotyluk
-          </p>
-        </div>
-
-        <!-- Social Links -->
-        <div class="text-xs-center intro-zoom">
-          <a
-          href="https://www.linkedin.com/in/elijahkotyluk"
-          target="_blank">
-            <fa :icon="['fab', 'linkedin']" style="font-size: 40px" />
-          </a>
-          <a
-          href="https://twitter.com/ElijahDavidK"
-          target="_blank">
-            <fa :icon="['fab', 'twitter']" style="font-size: 40px" />
-          </a>
-          <a
-          href="https://github.com/ElijahKotyluk"
-          target="_blank">
-            <fa :icon="['fab', 'github']" style="font-size: 40px"/>
-          </a>
-        </div>
-        
+          <!-- Social Links -->
+          <div class="text-xs-center intro-zoom">
+            <a
+            class="pa-2"
+            href="https://www.linkedin.com/in/elijahkotyluk"
+            target="_blank">
+              <fa :icon="['fab', 'linkedin']" style="font-size: 40px" />
+            </a>
+            <a
+            class="pa-2"
+            href="https://twitter.com/ElijahDavidK"
+            target="_blank">
+              <fa :icon="['fab', 'twitter']" style="font-size: 40px" />
+            </a>
+            <a
+            class="pa-2"
+            href="https://github.com/ElijahKotyluk"
+            target="_blank">
+              <fa :icon="['fab', 'github']" style="font-size: 40px"/>
+            </a>
+          </div>
+        </v-layout>
       </v-container>
-
-      <!-- Vuetify/Nuxt Animations -->
-      <div class="text-xs-center mt-5">
-        <h3 class="ma-3">This site is powered by:</h3>
-        <logo/>
-        <vuetify-logo/>
-      </div>
-
     </v-flex>
+
+    <skills></skills>
   </v-layout>
 </template>
 
 <script>
 import Logo from '~/components/animations/Logo.vue'
 import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
+import Skills from '~/components/sections/Skills.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    Skills
   }
 }
 </script>
