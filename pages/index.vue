@@ -1,16 +1,11 @@
 <template>
-  <v-layout
-    column
-    align-center>
-    <v-flex
-    xs12
-    sm8
-    md6>
+
 
       <!-- Intro Container -->
       <v-container fill-height>
         <v-layout
-        column>
+        column
+        align-center>
           <!-- Avatar -->
           <v-avatar
           class="elevation-12 intro-zoom"
@@ -47,11 +42,7 @@
             </a>
           </div>
         </v-layout>
-      </v-container>
-    </v-flex>
-
-    <skills></skills>
-  </v-layout>
+      </v-container fluid>
 </template>
 
 <script>

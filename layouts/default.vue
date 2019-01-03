@@ -62,9 +62,7 @@
     <v-content
     fill-height
     class="pt-3">
-      <v-container fill-height>
-        <nuxt />
-      </v-container>
+          <nuxt />
     </v-content>
 
     <v-footer
