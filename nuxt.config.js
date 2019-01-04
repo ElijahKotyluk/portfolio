@@ -49,7 +49,7 @@ module.exports = {
         imports: [
           {
             set: '@fortawesome/fontawesome-free-brands',
-            icons: ['faGithub', 'faLinkedin', 'faTwitter']
+            icons: ['faGitkraken', 'faLinkedin', 'faTwitter']
           }
         ]
       }]
