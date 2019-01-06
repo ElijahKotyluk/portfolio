@@ -1,15 +1,15 @@
 <template>
   <v-layout
-  column
-  justify-center
-  align-center>
+    column
+    justify-center
+    align-center>
     <v-flex
-    xs12
-    sm8
-    md6>
+      xs12
+      sm8
+      md6>
       <v-card
-      class="mt-5 elevation-12"
-      width="50vh">
+        class="mt-5 elevation-12"
+        width="50vh">
         <v-toolbar>
           <v-spacer />
           <v-toolbar-title class="headline">
@@ -17,11 +17,11 @@
           </v-toolbar-title>
           <v-spacer />
         </v-toolbar>
-
+        <!-- Form -->
         <v-form method="post"
-        action="https://formspree.io/elijah@elijahkotyluk.com"
-        id="nativeForm"
-        v-model="valid">
+          action="https://formspree.io/elijah@elijahkotyluk.com"
+          id="nativeForm"
+          v-model="valid">
           <input type="hidden" name="_next" value="https://elijahkotyluk.com" />
           <v-text-field
             class="pa-3 mt-2"
@@ -30,8 +30,7 @@
             v-model="email"
             :rules="emailRules"
             required
-            name="mail"
-          ></v-text-field>
+            name="mail"></v-text-field>
           <v-textarea
             class="pa-3"
             outline
@@ -39,8 +38,7 @@
             v-model="message"
             :rules="messageRules"
             required
-            name="message"
-          ></v-textarea>
+            name="message"></v-textarea>
           <v-btn @click="submit" :disabled="!valid">submit</v-btn>
         </v-form>
       </v-card>
@@ -50,6 +48,7 @@
 
 <script>
 export default {
+  name: 'Contact',
   data () {
     return {
        valid: false,

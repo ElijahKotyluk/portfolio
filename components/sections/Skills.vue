@@ -6,7 +6,6 @@
     <v-flex xs12
     sm8
     md6>
-
       <p class="ma-2 pl-2 mt-4">
         Can't see parts of your tech-stack on this list? No worries!
       </p>

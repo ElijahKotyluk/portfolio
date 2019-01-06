@@ -11,6 +11,7 @@
             <!-- Avatar -->
             <v-layout column align-center>
               <v-avatar
+              id="avatar"
               class="elevation-12 intro-zoom"
               size="256">
                 <img src="../static/mee.png" alt="avatar" />
@@ -26,24 +27,24 @@
 
             <!-- Social Links -->
             <div class="text-xs-center intro-zoom">
-              <a
-              class="pa-2"
-              href="https://www.linkedin.com/in/elijahkotyluk"
-              target="_blank">
-                <fa :icon="['fab', 'linkedin']" style="font-size: 40px" />
-              </a>
-              <a
-              class="pa-2"
-              href="https://twitter.com/ElijahDavidK"
-              target="_blank">
-                <fa :icon="['fab', 'twitter']" style="font-size: 40px" />
-              </a>
-              <a
-              class="pa-2"
-              href="https://github.com/ElijahKotyluk"
-              target="_blank">
-                <fa :icon="['fab', 'gitkraken']" style="font-size: 40px"/>
-              </a>
+                <a
+                  class="pa-2"
+                  href="https://www.linkedin.com/in/elijahkotyluk"
+                  target="_blank">
+                  <fa :icon="['fab', 'linkedin']" style="font-size: 40px" />
+                </a>
+                <a
+                  class="pa-2"
+                  href="https://twitter.com/ElijahDavidK"
+                  target="_blank">
+                  <fa :icon="['fab', 'twitter']" style="font-size: 40px" />
+                </a>
+                <a
+                  class="pa-2"
+                  href="https://github.com/ElijahKotyluk"
+                  target="_blank">
+                  <fa :icon="['fab', 'gitkraken']" style="font-size: 40px"/>
+                </a>
             </div>
           </v-flex>
 
@@ -53,7 +54,11 @@
           <!-- About Me -->
           <v-container fluid>
             <v-flex xs12 sm24 md12>
-              <about-me></about-me>
+              <about-me id="about-me"></about-me>
+              <div class="text-xs-center">
+                <vuetify-logo></vuetify-logo>
+                <logo></logo>
+              </div>
             </v-flex>
           </v-container>
 
@@ -62,7 +67,7 @@
 
           <!-- Skills -->
           <v-flex xs12 sm24 md12>
-            <skills></skills>
+            <skills id="skills"></skills>
           </v-flex>
         </v-layout>
       </v-container>
@@ -73,13 +78,15 @@ import Logo from '~/components/animations/Logo.vue'
 import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
 import AboutMe from '~/components/sections/AboutMe.vue'
 import Skills from '~/components/sections/Skills.vue'
+import Contact from '~/components/Contact.vue'
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
     AboutMe,
-    Skills
+    Skills,
+    Contact
   }
 }
 </script>
