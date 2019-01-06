@@ -4,7 +4,7 @@
       class="pa-0"
       fixed
       app>
-      <!-- Toolbar title -->
+      <!-- toolbar title -->
       <v-toolbar-title>
         <v-btn
         outline
@@ -15,7 +15,7 @@
         to="/">{{ title.name }}</v-btn>
       </v-toolbar-title>
 
-      <!-- Toolbar nav -->
+      <!-- toolbar nav -->
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
           @click="$vuetify.goTo('#avatar', { offset: -100 })"
@@ -40,10 +40,10 @@
 
       </v-toolbar-items>
 
-      <!-- A little space -->
+      <!-- a little space -->
       <v-spacer></v-spacer>
 
-      <!-- Menu for mobile devices -->
+      <!-- menu for mobile devices -->
       <v-menu class="hidden-sm-and-up pr-4">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
         <v-list>
@@ -56,17 +56,27 @@
       </v-menu>
     </v-toolbar>
 
-    <!-- Nuxt content -->
+      <v-btn
+      @click.stop="rightDrawer = !rightDrawer">
+        <v-list-tile-action>
+          <v-icon>folder_open</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title v-text="projects.title" />
+        </v-list-tile-content>
+      </v-btn>
+
+    <!-- nuxt content -->
     <v-content
-      fill-height
-      class="pt-3">
-      <nuxt />
+    fill-height
+    class="pt-3">
+          <nuxt />
     </v-content>
 
-    <!-- Footer -->
     <v-footer
       fixed
-      app>
+      app
+    >
       <v-spacer></v-spacer>
       <span>&copy; Elijah Kotyluk 2019</span>
       <v-spacer></v-spacer>
@@ -75,35 +85,29 @@
 </template>
 
 <script>
-import Contact from '~/components/Contact.vue'
-
-export default {
-  data() {
-    return {
-      dialog: false,
-      menu: [
-        { icon: 'apps', title: 'About Me', to: '/' },
-        { icon: 'bubble_chart', title: 'Skills', },
-        { icon: 'email', title: 'Contact', to: '/contact'}
-      ],
-      projects: {
-        title: 'Projects',
-        list: [
-          { icon: 'today', title: 'vue-moment-calendar', href: 'https://github.com/ElijahKotyluk/Vue-Moment-Calendar'},
-          { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'},
-          { icon: 'chat', title: 'vue-firebase-chat', href: 'https://github.com/ElijahKotyluk/vue-firebase-chat'}
-        ]
-      },
-      title: {
-        name: 'ElijahKotyluk.com',
-        href: 'https://elijahkotyluk.com/'
+  export default {
+    data() {
+      return {
+        menu: [
+          { icon: 'apps', title: 'About Me', to: '/' },
+          { icon: 'bubble_chart', title: 'Skills', },
+          { icon: 'email', title: 'Contact', to: '/contact'}
+        ],
+        projects: {
+          title: 'Projects',
+          list: [
+            { icon: 'today', title: 'vue-moment-calendar', href: 'https://github.com/ElijahKotyluk/Vue-Moment-Calendar'},
+            { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'},
+            { icon: 'chat', title: 'vue-firebase-chat', href: 'https://github.com/ElijahKotyluk/vue-firebase-chat'}
+          ]
+        },
+        title: {
+          name: 'ElijahKotyluk.com',
+          href: 'https://elijahkotyluk.com/'
+        }
       }
     }
-  },
-  components: {
-    Contact
   }
-}
 </script>
 
 <style>
