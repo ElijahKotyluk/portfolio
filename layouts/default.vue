@@ -60,10 +60,20 @@
       <v-menu class="hidden-sm-and-up pr-4">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
         <v-list>
-          <v-list-tile v-for="item in menu" :key="item.icon" :to="item.to">
+          <v-list-tile @click="$vuetify.goTo('#avatar', { offset: -85 })">
             <v-list-tile-content>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-             </v-list-tile-content>
+              <v-list-tile-title>{{ menu[0].title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile @click="$vuetify.goTo('#tech', { offset: -85 })">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ menu[1].title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile @click="$vuetify.goTo('#timeline', { offset: -85 })">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ menu[2].title }}</v-list-tile-title>
+            </v-list-tile-content>
           </v-list-tile>
         </v-list>
       </v-menu>
