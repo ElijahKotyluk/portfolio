@@ -6,21 +6,18 @@
     <v-flex xs12
     sm8
     md6>
-      <p class="ma-2 pl-2 mt-4">
-        Can't see parts of your tech-stack on this list? No worries!
-      </p>
-      <p class="ml-2 pl-2">
-        Depending on the project, I use more technologies than listed below.
-      </p>
-      <div>
-        <polar-area></polar-area>
+    <p class="headline text-xs-center pt-3">
+      Technologies
+    </p>
+      <div class="pb-4 pt-2">
+        <radar style="position: relative; height:50vh; width:100vw"></radar>
       </div>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import PolarArea from '~/components/polar-area'
+import Radar from '~/components/radar'
 
 export default {
   data() {
@@ -29,7 +26,7 @@ export default {
     }
   },
   components: {
-    PolarArea
+    Radar
   }
 }
 </script>

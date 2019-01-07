@@ -3,6 +3,8 @@
 
       <!-- Intro Container -->
       <v-container
+      id="app-container"
+      class="pt-5"
       fluid>
         <v-layout
         column>
@@ -22,6 +24,12 @@
             <div class="text-xs-center intro-zoom pt-2">
               <p class="display-1 pt-3">
                 Elijah Kotyluk
+              </p>
+            </div>
+
+            <div class="text-xs-center intro-zoom">
+              <p class="subheading">
+                developer - 25 - Davis, CA
               </p>
             </div>
 
@@ -46,28 +54,31 @@
                   <fa :icon="['fab', 'gitkraken']" style="font-size: 40px"/>
                 </a>
             </div>
+
+
+            <div class="text-xs-center pt-5">
+              <p class="body-2">
+                This site is powered by:
+              </p>
+              <vuetify-logo></vuetify-logo>
+              <logo></logo>
+            </div>
           </v-flex>
-
-          <!-- Divider -->
-          <v-divider></v-divider>
-
-          <!-- About Me -->
-          <v-container fluid>
-            <v-flex xs12 sm24 md12>
-              <about-me id="about-me"></about-me>
-              <div class="text-xs-center">
-                <vuetify-logo></vuetify-logo>
-                <logo></logo>
-              </div>
-            </v-flex>
-          </v-container>
 
           <!-- Divider -->
           <v-divider></v-divider>
 
           <!-- Skills -->
           <v-flex xs12 sm24 md12>
-            <skills id="skills"></skills>
+            <skills id="tech"></skills>
+          </v-flex>
+
+          <!-- Divider -->
+          <v-divider></v-divider>
+
+          <!-- Timeline -->
+          <v-flex xs12 sm24 md12>
+            <timeline></timeline>
           </v-flex>
         </v-layout>
       </v-container>
@@ -79,6 +90,7 @@ import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
 import AboutMe from '~/components/sections/AboutMe.vue'
 import Skills from '~/components/sections/Skills.vue'
 import Contact from '~/components/Contact.vue'
+import Timeline from '~/components/sections/Timeline.vue'
 
 export default {
   components: {
@@ -86,7 +98,8 @@ export default {
     VuetifyLogo,
     AboutMe,
     Skills,
-    Contact
+    Contact,
+    Timeline
   }
 }
 </script>

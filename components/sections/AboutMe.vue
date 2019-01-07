@@ -5,11 +5,23 @@
       justify-center
       align-center>
       <v-flex wrap xs12 sm8 md6>
-        <p class="title font-weight-medium text-xs-left mb-0">
-          Hello,
+        <v-layout row>
+          <v-flex xs6>
+            <p class="title font-weight-medium">
+              <strong>Hello</strong>
+            </p>
+          </v-flex>
+          <v-flex xs6>
+            <p class="title font-weight-medium">
+              , I'm <strong>Elijah</strong>
+            </p>
+          </v-flex>
+        </v-layout>
+        <p class="subheading font-weight-medium text-xs-center">
+          A self-taught developer in his 20's
         </p>
-        <p class="subheading font-weight-regular text-xs-left">
-          my name is <strong>Elijah</strong>. I'm a self-taught developer in his 20's living in California.
+        <p class="subheading font-weight-regular text-xs-center">
+          Davis, CA
         </p>
       </v-flex>
     </v-layout>

@@ -7,36 +7,49 @@
       <!-- toolbar title -->
       <v-toolbar-title>
         <v-btn
-        outline
-        flat
-        active-class
-        ripple
-        class="title font-weight-light text-lowercase"
-        to="/">{{ title.name }}</v-btn>
+          outline
+          flat
+          active-class
+          ripple
+          class="title font-weight-light text-lowercase"
+          @click="$vuetify.goTo('#app-container', { offset: -85 })">
+          {{ title.name }}
+      </v-btn>
       </v-toolbar-title>
 
       <!-- toolbar nav -->
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
-          @click="$vuetify.goTo('#avatar', { offset: -100 })"
+          @click="$vuetify.goTo('#avatar', { offset: -85 })"
           class="body-2"
           flat
-          color="rgb(135, 134, 134)"
+          color="rgba(255, 255, 255, 1)"
           active-class
-          ripple
-          exact>
+          ripple>
           {{ menu[0].title }}
         </v-btn>
         <v-btn
-          @click="$vuetify.goTo('#skills', { offset: -100 })"
+          @click="$vuetify.goTo('#tech', { offset: -85 })"
           class="body-2"
           flat
-          color="rgb(135, 134, 134)"
+          color="rgba(255, 255, 255, 1)"
           active-class
-          ripple
-          exact>
+          ripple>
           {{ menu[1].title }}
         </v-btn>
+        <v-btn
+          @click="$vuetify.goTo('#timeline', {offset: -85 })"
+          class="body-2"
+          flat
+          color="rgba(255, 255, 255, 1)"
+          active-class
+          ripple>
+          {{ menu[2].title }}
+        </v-btn>
+
+        <v-dialog>
+
+        </v-dialog>
 
       </v-toolbar-items>
 
@@ -56,20 +69,8 @@
       </v-menu>
     </v-toolbar>
 
-      <v-btn
-      @click.stop="rightDrawer = !rightDrawer">
-        <v-list-tile-action>
-          <v-icon>folder_open</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-content>
-          <v-list-tile-title v-text="projects.title" />
-        </v-list-tile-content>
-      </v-btn>
-
     <!-- nuxt content -->
-    <v-content
-    fill-height
-    class="pt-3">
+    <v-content>
           <nuxt />
     </v-content>
 
@@ -89,18 +90,10 @@
     data() {
       return {
         menu: [
-          { icon: 'apps', title: 'About Me', to: '/' },
-          { icon: 'bubble_chart', title: 'Skills', },
-          { icon: 'email', title: 'Contact', to: '/contact'}
+          { title: 'About Me' },
+          { title: 'Tech' },
+          { title: 'Timeline' }
         ],
-        projects: {
-          title: 'Projects',
-          list: [
-            { icon: 'today', title: 'vue-moment-calendar', href: 'https://github.com/ElijahKotyluk/Vue-Moment-Calendar'},
-            { icon: 'search', title: 'nyt-react-search', href: 'https://github.com/ElijahKotyluk/NYT-react-search'},
-            { icon: 'chat', title: 'vue-firebase-chat', href: 'https://github.com/ElijahKotyluk/vue-firebase-chat'}
-          ]
-        },
         title: {
           name: 'ElijahKotyluk.com',
           href: 'https://elijahkotyluk.com/'
