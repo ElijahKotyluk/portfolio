@@ -6,11 +6,11 @@ export default {
     this.renderChart({
       labels: [ 'Vue', 'Nuxt', 'React', 'Vuetify', 'SCSS/CSS3', 'Flask', 'Webpack', 'Python' ],
       datasets: [{
-        label: 'Skills',
+        label: 'Skill',
         backgroundColor: 'rgba(12, 183, 207, 0.1)',
-        pointBackgroundColor: 'rgba(12, 183, 207, .6)',
-        hoverBackgroundColor: 'rgba(12, 183, 207, .6)',
-        borderColor: 'rgba(12, 183, 207, .6)',
+        pointBackgroundColor: 'rgba(12, 183, 207, .3)',
+        hoverBackgroundColor: 'rgba(12, 183, 207, .3)',
+        borderColor: 'rgba(12, 183, 207, .3)',
         hoverBorderColor: [],
         data: [ 10, 9, 6, 8, 7, 6, 8, 6 ]
       }]
@@ -21,7 +21,8 @@ export default {
       legend: {
         labels: {
           padding: 10,
-          fontColor: 'rgba(200, 200, 200, 1)'
+          fontColor: 'rgba(200, 200, 200, 1)',
+          fontSize: 18
         },
         position: 'top'
       },
@@ -35,7 +36,8 @@ export default {
       },
       scale: {
         pointLabels: {
-          fontColor: 'rgba(12, 183, 207, .6)'
+          fontColor: 'rgba(12, 183, 207, .3)',
+          fontSize: 16
         },
         ticks: {
           min: 0,
