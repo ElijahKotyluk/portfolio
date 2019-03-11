@@ -12,7 +12,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "gcloud app deploy"
+    "deploy": "gcloud app deploy",
+    "init": "yarn install --ignore-engines"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

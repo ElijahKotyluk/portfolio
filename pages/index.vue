@@ -2,20 +2,14 @@
 
 
       <!-- Intro Container -->
-      <v-container
-      id="app-container"
-      class="pt-5"
-      fluid>
-        <v-layout
-        column>
-          <v-flex xs12 sm24 md12
-          class="pb-3">
+      <v-container fluid class="pt-5">
+        <v-layout column>
+          <v-flex xs12 sm24 md12 class="pb-3">
             <!-- Avatar -->
             <v-layout column align-center>
-              <v-avatar
-              id="avatar"
-              class="elevation-12 intro-zoom"
-              size="256">
+              <v-avatar id="avatar"
+                        class="elevation-12 intro-zoom"
+                        size="256">
                 <img src="../static/mee.png" alt="avatar" />
               </v-avatar>
             </v-layout>
@@ -29,7 +23,7 @@
 
             <div class="text-xs-center intro-zoom">
               <p class="subheading">
-                developer - 25 - Davis, CA
+                developer - 26 - Davis, CA
               </p>
             </div>
 
@@ -85,12 +79,12 @@
 </template>
 
 <script>
-import Logo from '~/components/animations/Logo.vue'
-import VuetifyLogo from '~/components/animations/VuetifyLogo.vue'
-import AboutMe from '~/components/sections/AboutMe.vue'
-import Skills from '~/components/sections/Skills.vue'
-import Contact from '~/components/Contact.vue'
-import Timeline from '~/components/sections/Timeline.vue'
+import Logo from '~/components/animations/Logo.vue';
+import VuetifyLogo from '~/components/animations/VuetifyLogo.vue';
+import AboutMe from '~/components/sections/AboutMe.vue';
+import Skills from '~/components/sections/Skills.vue';
+import Contact from '~/components/Contact.vue';
+import Timeline from '~/components/sections/Timeline.vue';
 
 export default {
   components: {

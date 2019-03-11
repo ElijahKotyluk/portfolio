@@ -6,46 +6,42 @@
       app>
       <!-- toolbar title -->
       <v-toolbar-title>
-        <v-btn
-          outline
-          flat
-          active-class
-          ripple
-          class="title font-weight-light text-lowercase"
-          @click="$vuetify.goTo('#app-container', { offset: -85 })">
+        <v-btn @click="$vuetify.goTo('#app-container', { offset: -85 })"
+                outline
+                flat
+                active-class
+                ripple
+                class="title font-weight-light text-lowercase">
           {{ title.name }}
-      </v-btn>
+        </v-btn>
       </v-toolbar-title>
 
       <!-- toolbar nav -->
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn
-          @click="$vuetify.goTo('#avatar', { offset: -85 })"
-          class="body-2"
-          flat
-          color="rgba(255, 255, 255, 1)"
-          active-class
-          ripple>
+        <v-btn @click="$vuetify.goTo('#avatar', { offset: -85 })"
+                class="body-2"
+                flat
+                color="rgba(255, 255, 255, 1)"
+                active-class
+                ripple>
           {{ menu[0].title }}
         </v-btn>
-        <v-btn
-          @click="$vuetify.goTo('#tech', { offset: -85 })"
-          class="body-2"
-          flat
-          color="rgba(255, 255, 255, 1)"
-          active-class
-          ripple>
+        <v-btn @click="$vuetify.goTo('#tech', { offset: -85 })"
+                class="body-2"
+                flat
+                color="rgba(255, 255, 255, 1)"
+                active-class
+                ripple>
           {{ menu[1].title }}
         </v-btn>
-        <v-btn
-          @click="$vuetify.goTo('#timeline', {offset: -85 })"
-          class="body-2"
-          flat
-          color="rgba(255, 255, 255, 1)"
-          active-class
-          ripple>
-          {{ menu[2].title }}
-        </v-btn>
+        <v-btn @click="$vuetify.goTo('#timeline', {offset: -85 })"
+                class="body-2"
+                flat
+                color="rgba(255, 255, 255, 1)"
+                active-class
+                ripple>
+                {{ menu[2].title }}
+              </v-btn>
 
         <v-dialog>
 
@@ -60,19 +56,11 @@
       <v-menu class="hidden-sm-and-up pr-4">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
         <v-list>
-          <v-list-tile @click="$vuetify.goTo('#avatar', { offset: -85 })">
+          <v-list-tile v-for="item in menu" :key="item.id" @click="$vuetify.goTo(item.id, { offset: -85 })">
             <v-list-tile-content>
-              <v-list-tile-title>{{ menu[0].title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile @click="$vuetify.goTo('#tech', { offset: -85 })">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ menu[1].title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile @click="$vuetify.goTo('#timeline', { offset: -85 })">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ menu[2].title }}</v-list-tile-title>
+              <v-list-tile-tile>
+                {{ item.title }}
+              </v-list-tile-tile>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
@@ -100,9 +88,18 @@
     data() {
       return {
         menu: [
-          { title: 'About Me' },
-          { title: 'Tech' },
-          { title: 'Timeline' }
+          {
+            title: 'About Me',
+            id: '#avatar'
+          },
+          {
+            title: 'Tech',
+            id: '#tech'
+          },
+          {
+            title: 'Timeline',
+            id: '#timeline'
+          }
         ],
         title: {
           name: 'ElijahKotyluk.com',
