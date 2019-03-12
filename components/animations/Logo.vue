@@ -54,8 +54,8 @@
   top: 40px;
   left: 23px;
   animation: godown 0.5s linear forwards 3s;
-  border-left: 11.5px solid transparent;
-  border-right: 11.5px solid transparent;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
   border-bottom: 20px solid #fff;
 }
 

@@ -30,37 +30,37 @@ export default {
         {
           icon: 'ac_unit',
           color: 'rgba(18, 18, 18, .7)',
-          iconColor: 'rgba(12, 183, 207, .3)',
-          title: 'Dec, 2018',
-          cardText: 'Started back up at Ribosome as a Full-Stack Dev, contracting and prototyping'
-        },
-        {
-          icon: 'ac_unit',
-          color: 'rgba(18, 18, 18, .7)',
-          iconColor: 'rgba(12, 183, 207, .3)',
+          iconColor: 'rgba(12, 183, 207, .5)',
           title: 'Nov, 2018',
-          cardText: 'Graduated from UC Berkeley Coding Bootcamp'
+          cardText: 'Ribosome: Full-Stack Dev. - Contracting & Prototyping'
         },
         {
           icon: 'ac_unit',
           color: 'rgba(18, 18, 18, .7)',
-          iconColor: 'rgba(12, 183, 207, .3)',
+          iconColor: 'rgba(12, 183, 207, .5)',
+          title: 'Nov, 2018',
+          cardText: 'Graduated UC Berkeley Coding Bootcamp'
+        },
+        {
+          icon: 'ac_unit',
+          color: 'rgba(18, 18, 18, .7)',
+          iconColor: 'rgba(12, 183, 207, .5)',
           title: 'May, 2018',
-          cardText: 'Began UC Berkeley Coding Bootcamp'
+          cardText: 'UC Berkeley Coding Bootcamp'
         },
         {
           icon: 'ac_unit',
           color: 'rgba(18, 18, 18, .7)',
-          iconColor: 'rgba(12, 183, 207, .3)',
+          iconColor: 'rgba(12, 183, 207, .5)',
           title: 'Nov, 2017',
-          cardText: 'Began my first job at Ribosome as a Jr. Dev'
+          cardText: 'Ribosome: Junior Developer'
         },
         {
           icon: 'ac_unit',
           color: 'rgba(18, 18, 18, .7)',
-          iconColor: 'rgba(12, 183, 207, .3)',
+          iconColor: 'rgba(12, 183, 207, .5)',
           title: 'Feb, 2017',
-          cardText: 'Began my journey as a developer'
+          cardText: 'The month I decided I wanted to learn programming'
         }
       ]
     }
@@ -70,6 +70,6 @@ export default {
 
 <style>
 .theme--dark.v-timeline:before {
-  background: rgba(12, 183, 207, .3);
+  background: rgba(12, 183, 207, .5);
 }
 </style>
