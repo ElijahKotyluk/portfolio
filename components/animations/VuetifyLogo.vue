@@ -9,7 +9,7 @@
 .VuetifyLogo {
   width: 50px;
   transform: rotateY(560deg);
-  animation: turn 5.5s ease-out forwards 1s;
+  animation: turn 3.5s ease-out forwards 1s;
 }
 
 @keyframes turn {

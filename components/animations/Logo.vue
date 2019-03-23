@@ -55,7 +55,7 @@
   animation: godown 0.5s linear forwards 3s;
   border-left: 11.6666666667px solid transparent;
   border-right: 11.6666666667px solid transparent;
-  border-bottom: 20px solid #000;
+  border-bottom: 20px solid rgba(0, 0, 0, 0.55);
 }
 
 @keyframes turn {
