@@ -9,13 +9,12 @@
 
 <style>
 .VueToNuxtLogo {
-  display: inline-block;
   animation: turn 2s linear forwards 1s;
   transform: rotateX(180deg);
   position: relative;
+  height: 57.6666666667px;
+  width: 89.3333333333px;
   overflow: hidden;
-  height: 60px;
-  width: 81.5px;
 }
 
 .Triangle {
@@ -29,34 +28,34 @@
 .Triangle--one {
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
-  border-bottom: 60px solid #41b883;
+  border-bottom: 60px solid rgba(65, 184, 131, 0.25);
 }
 
 .Triangle--two {
   top: 10px;
-  left: 11.5px;
+  left: 11.6666666667px;
   animation: goright 0.5s linear forwards 3.5s;
-  border-left: 29px solid transparent;
-  border-right: 29px solid transparent;
-  border-bottom: 50px solid #3b8070;
+  border-left: 29.1666666667px solid transparent;
+  border-right: 29.1666666667px solid transparent;
+  border-bottom: 50px solid rgba(59, 128, 112, 0.5);
 }
 
 .Triangle--three {
   top: 20px;
-  left: 11.5px;
+  left: 11.6666666667px;
   animation: goright 0.5s linear forwards 3.5s;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
-  border-bottom: 40px solid #35495e;
+  border-left: 23.3333333333px solid transparent;
+  border-right: 23.3333333333px solid transparent;
+  border-bottom: 40px solid rgba(53, 73, 94, 0.25);
 }
 
 .Triangle--four {
   top: 40px;
-  left: 23px;
+  left: 23.3333333333px;
   animation: godown 0.5s linear forwards 3s;
-  border-left: 11px solid transparent;
-  border-right: 11px solid transparent;
-  border-bottom: 20px solid #fff;
+  border-left: 11.6666666667px solid transparent;
+  border-right: 11.6666666667px solid transparent;
+  border-bottom: 20px solid #000;
 }
 
 @keyframes turn {
@@ -64,16 +63,14 @@
     transform: rotateX(0deg);
   }
 }
-
 @keyframes godown {
   100% {
     top: 60px;
   }
 }
-
 @keyframes goright {
   100% {
-    left: 23px;
+    left: 23.3333333333px;
   }
 }
 </style>

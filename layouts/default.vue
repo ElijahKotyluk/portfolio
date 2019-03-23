@@ -58,9 +58,9 @@
         <v-list>
           <v-list-tile v-for="item in menu" :key="item.id" @click="$vuetify.goTo(item.id, { offset: -85 })">
             <v-list-tile-content>
-              <v-list-tile-tile>
+              <v-list-tile-title>
                 {{ item.title }}
-              </v-list-tile-tile>
+              </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>

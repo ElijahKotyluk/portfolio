@@ -7,9 +7,9 @@
           <v-flex xs12 sm24 md12 class="pb-3">
             <!-- Avatar -->
             <v-layout column align-center>
-              <v-avatar id="avatar"
-                        class="elevation-12 intro-zoom"
-                        size="256">
+              <v-avatar class="elevation-12 intro-zoom"
+                        size="256"
+                        id="avatar">
                 <img src="../static/mee.png" alt="avatar" />
               </v-avatar>
             </v-layout>
@@ -20,7 +20,6 @@
                 Elijah Kotyluk
               </p>
             </div>
-
             <div class="text-xs-center intro-zoom">
               <p class="subheading">
                 developer - 26 - Davis, CA
@@ -29,33 +28,36 @@
 
             <!-- Social Links -->
             <div class="text-xs-center intro-zoom">
-                <a
-                  class="pa-2"
-                  href="https://www.linkedin.com/in/elijahkotyluk"
-                  target="_blank">
-                  <fa :icon="['fab', 'linkedin']" style="font-size: 40px" />
+                <a href="https://www.linkedin.com/in/elijahkotyluk"
+                   class="pa-2 social-link"
+                   target="_blank">
+                  <fa :icon="['fab', 'linkedin']" style="font-size: 36px" />
                 </a>
-                <a
-                  class="pa-2"
-                  href="https://twitter.com/ElijahDavidK"
-                  target="_blank">
-                  <fa :icon="['fab', 'twitter']" style="font-size: 40px" />
+                <a href="https://twitter.com/ElijahDavidK"
+                   class="pa-2 social-link"
+                   target="_blank">
+                  <fa :icon="['fab', 'twitter']" style="font-size: 36px" />
                 </a>
-                <a
-                  class="pa-2"
-                  href="https://github.com/ElijahKotyluk"
-                  target="_blank">
-                  <fa :icon="['fab', 'gitkraken']" style="font-size: 40px"/>
+                <a href="https://github.com/ElijahKotyluk"
+                   class="pa-2 social-link"
+                   target="_blank">
+                  <fa :icon="['fab', 'gitkraken']" style="font-size: 36px"/>
                 </a>
             </div>
 
-
+            <!-- Animations -->
             <div class="text-xs-center pt-5">
               <p class="body-2">
                 This site is powered by:
               </p>
-              <vuetify-logo></vuetify-logo>
-              <logo></logo>
+              <v-layout row justify-center>
+                <v-flex xs1>
+                  <vuetify-logo></vuetify-logo>
+                </v-flex>
+                <v-flex xs1>
+                  <logo></logo>
+                </v-flex>
+              </v-layout>
             </div>
           </v-flex>
 
@@ -113,5 +115,9 @@ export default {
 
 .intro-zoom {
 	animation: zoom-in-out 1.5s;
+}
+
+.social-link {
+  color: rgba(0, 0, 0, 0.6);
 }
 </style>

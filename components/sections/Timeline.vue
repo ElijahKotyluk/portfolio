@@ -32,7 +32,7 @@ export default {
           color: 'rgba(18, 18, 18, .7)',
           iconColor: 'rgba(12, 183, 207, .5)',
           title: 'Nov, 2018',
-          cardText: 'Ribosome: Full-Stack Dev. - Contracting & Prototyping'
+          cardText: 'riboso.me: Full-Stack Dev. - Contracting & Prototyping'
         },
         {
           icon: 'ac_unit',
@@ -53,7 +53,7 @@ export default {
           color: 'rgba(18, 18, 18, .7)',
           iconColor: 'rgba(12, 183, 207, .5)',
           title: 'Nov, 2017',
-          cardText: 'Ribosome: Junior Developer'
+          cardText: 'riboso.me: Junior Developer'
         },
         {
           icon: 'ac_unit',
