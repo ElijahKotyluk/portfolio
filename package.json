@@ -4,9 +4,6 @@
   "description": "Personal website and portfolio,",
   "author": "Elijah Kotyluk",
   "private": true,
-  "engines": {
-    "node": "10.x.x"
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -20,9 +17,9 @@
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/markdownit": "^1.2.3",
     "chart.js": "^2.7.3",
     "cross-env": "^5.2.0",
-    "event-stream": "3.3.4",
     "express": "^4.16.3",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.3.0",

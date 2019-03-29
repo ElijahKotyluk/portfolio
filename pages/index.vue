@@ -10,7 +10,7 @@
               <v-avatar class="elevation-12 intro-zoom"
                         size="256"
                         id="avatar">
-                <img src="../static/mee.png" alt="avatar" />
+                <img src="../static/me.png" alt="avatar" />
               </v-avatar>
             </v-layout>
 

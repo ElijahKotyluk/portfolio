@@ -6,47 +6,25 @@
       app>
       <!-- toolbar title -->
       <v-toolbar-title>
-        <v-btn @click="$vuetify.goTo('#app-container', { offset: -85 })"
-                outline
-                flat
-                active-class
-                ripple
-                class="title font-weight-light text-lowercase">
+        <v-btn class="title font-weight-light text-lowercase"
+               to="/"
+               outline
+               flat
+               active-class
+               ripple>
           {{ title.name }}
         </v-btn>
       </v-toolbar-title>
 
       <!-- toolbar nav -->
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn @click="$vuetify.goTo('#avatar', { offset: -85 })"
-                class="body-2"
-                flat
-                color="rgba(255, 255, 255, 1)"
-                active-class
-                ripple>
-          {{ menu[0].title }}
-        </v-btn>
-        <v-btn @click="$vuetify.goTo('#tech', { offset: -85 })"
-                class="body-2"
-                flat
-                color="rgba(255, 255, 255, 1)"
-                active-class
-                ripple>
-          {{ menu[1].title }}
-        </v-btn>
-        <v-btn @click="$vuetify.goTo('#timeline', {offset: -85 })"
-                class="body-2"
-                flat
-                color="rgba(255, 255, 255, 1)"
-                active-class
-                ripple>
-                {{ menu[2].title }}
-              </v-btn>
-
-        <v-dialog>
-
-        </v-dialog>
-
+        <v-btn v-for="item in menu" :key="item.id"
+               @click="$vuetify.goTo(item.id, { offset: -10 })"
+               color="rgba(255, 255, 255, 1)"
+               class="body-2"
+               active-class
+               ripple
+               flat>{{ item.title }}</v-btn>
       </v-toolbar-items>
 
       <!-- a little space -->
@@ -68,7 +46,7 @@
     </v-toolbar>
 
     <!-- nuxt content -->
-    <v-content>
+    <v-content id="app-container">
           <nuxt />
     </v-content>
 
@@ -90,7 +68,7 @@
         menu: [
           {
             title: 'About Me',
-            id: '#avatar'
+            id: '#app-container'
           },
           {
             title: 'Tech',
@@ -102,8 +80,7 @@
           }
         ],
         title: {
-          name: 'ElijahKotyluk.com',
-          href: 'https://elijahkotyluk.com/'
+          name: 'ElijahKotyluk.com'
         }
       }
     }
